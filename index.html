@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	<! IMPORTANT to use a CSS file - external >
+	<link href="style.css" rel="stylesheet" type="text/css">
+    <title>Questionnaire</title>
+  </head>
+  
+  <body>
+	<h1>Survey about User Interface</h1>
+	<form id="myform" action="index.php" >
+	<! Choose a website to evaluate >
+	<h2>What do you think of the UI in this <a href="https://www.amazon.ca">Amazon</a> site?</h2>	
+	<br>
+	<! You should make your image clickable>
+	<img src="amazon.jpg" alt="https://www.amazon.ca" width="1200" height="600">
+	<br>
+	<br>
+	<div class="question">
+	<h2> Personal Information </h2>
+	<p>First name: <input type="text" name="firstname"></p>
+	<p>Last name: <input type="text" name="lastname"></p>
+	<p>Email address: <input type="text" name="emailaddress"></p>
+	<br>
+	<br>
+		
+	</div>	
+		
+	<div class="question">
+		<h2> Which part are you satisfied with?</h2>
+		<input type="checkbox" name="part" value="speed">System speed<br>
+		<input type="checkbox" name="part" value="reliability">System reliability<br>
+		<input type="checkbox" name="part" value="design">Interface design of the system<br>
+		
+		<br>
+		<h2>What do you find best?</h2>
+		<input type="radio" id="male" name="gender" value="male">
+		<label for="male">Ease of use</label><br>
+		<input type="radio" id="female" name="gender" value="female">
+		<label for="female">Interface design</label><br>
+		<input type="radio" id="other" name="gender" value="other">
+		<label for="other">Features provide</label><br>
+		<input type="radio" id="other" name="gender" value="other">
+		<label for="other">Quality of the output</label><br>
+		<input type="radio" id="other" name="gender" value="other">
+		<label for="other">Other</label>
+		
+		<br>
+		<h2>What is your opinion about organization of information on the screen?</h2>
+		<input type="radio" id="male" name="gen" value="male">
+		<label for="male">confusing</label><br>
+		<input type="radio" id="female" name="gen" value="female">
+		<label for="female">normal</label><br>
+		<input type="radio" id="other" name="gen" value="other">
+		<label for="other">clear</label>
+
+		<br>
+		<h2>What is the most difficult operation?</h2>
+		<select id="favorite">
+			<option value="learn" selected="selected">Learning to operate the system</option>
+			<option value="understand">To understand help messages on screen</option>
+			<option value="exploring">Exploring new features by trial and error</option>
+			<option value="Remembering">Remembering names and commands used</option>
+			<option value="fine">All operations are fine</option>
+		</select>
+
+		<br>
+		<h2>What do you think about the overall?</h2>
+		<ul class="likert">
+			<li> Very good </li>
+			<li><input type="radio" name="guilty" value="1" /></li>
+			<li><input type="radio" name="guilty" value="2" /></li>
+			<li><input type="radio" name="guilty" value="3" /></li>
+			<li><input type="radio" name="guilty" value="4" /></li>
+			<li><input type="radio" name="guilty" value="5" /></li>
+			<li> Very bad</li>
+		</ul>
+    </ul>
+  
+	</div>
+	
+	<br>
+		
+	<h2>Are there are comments/suggestion that can help improve the user interface?</h2>
+	<textarea rows="10" cols="160"></textarea>
+			
+	<br>
+		
+	<button id="submitButton" type="submit" value="Submit" class="block">
+		SUBMIT your questionnaire
+	</button>
+		
+	<p id="signature">Site created by Zhuoqun Pan</p>	
+	
+	</form>
+  </body>
