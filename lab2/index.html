@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+	<title>Fran's grocery store</title>
+</head>
+
+<body>
+	<h1>Welcome to Fran's Grocery Store</h1>
+
+<!-- Tab links, each one with an onclick event associated with it -->
+<div class="tab">
+  <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
+  <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
+  <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+</div>
+
+<!-- Tab content -->
+<div id="Client" class="tabcontent">
+  <h3>Client Information</h3>
+  <p>Tell us a bit about you.</p>
+	Choose a Category:
+	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
+	<option value=""></option>
+	<option value="Vegetarian">Vegetarian</option>
+	<option value="Vegetarian(organic)">Vegetarian(organic)</option>
+    <option value="GlutenFree">GlutenFree</option>
+    <option value="GlutenFree(organic)">GlutenFree(organic)</option>
+    <option value="Both">Both</option>
+    <option value="Both(organic)">Both(organic)</option>
+    <option value="None">None</option>
+    <option value="None(organic)">None(organic)</option>
+	</select>
+	<br>
+	<button class="tablinks" onclick="openInfo(event, 'Products')">See the Products</button>
+</div>
+
+<div id="Products" class="tabcontent">
+  <h3>Your targeted products</h3>
+  <p>We preselected products based on your restrictions.</p>
+	 Choose items to buy:
+	 <div id="displayProduct">
+	 </div>
+	 <button id="addCart" type="button" class="block" onclick="selectedItems()" >
+		Add selected items to cart.
+	</button>
+	<br>
+	<button class="tablinks" onclick="openInfo(event, 'Cart')">Go To Cart</button>
+	<br>
+
+
+</div>
+
+<div id="Cart" class="tabcontent">
+  <h3>Cart</h3>
+  <p>Here is your cart.</p>
+  <div id="displayCart"></div>
+</div>
+
+
+<p id="signature">Site created by Zhuoqun Pan</p>	
+
+<script src="scripts/groceries.js"></script>
+<script src="scripts/main.js"></script>
+
+</body>
