@@ -50,7 +50,7 @@ function populateListProductChoices(slct1, slct2) {
 		var checkbox = document.createElement("input");
 		checkbox.type = "checkbox";
 		checkbox.name = "product";
-		checkbox.value = images/productName;
+		checkbox.value = productName;
 		s2.appendChild(checkbox);
 
 		
@@ -63,7 +63,7 @@ function populateListProductChoices(slct1, slct2) {
 
 
 		var elem = document.createElement("img");
-		elem.setAttribute("src", productName+".jpg");
+		elem.setAttribute("src", images/productName+".jpg");
 		elem.setAttribute("height", "70");
 		elem.setAttribute("width", "70");
 		s2.appendChild(elem);
