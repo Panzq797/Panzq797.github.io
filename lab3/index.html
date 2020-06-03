@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+	<title>Fran's grocery store</title>
+</head>
+
+<body>
+	<h1>Welcome to Fran's Grocery Store</h1>
+
+<div class="dropdown">
+    <button class="dropbtn">Click here to start shopping
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button><br>
+      <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button><br>
+      <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button><br>
+      <br>
+    </div>
+  </div>
+<!-- Tab links, each one with an onclick event associated with it -->
+
+
+<!-- Tab content -->
+<div id="Client" class="tabcontent">
+	<br>
+	<br>
+  <h3>Client Information</h3>
+  <p>Tell us a bit about you.</p>
+	Choose your dietary need:<br>
+	<!--<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
+	<option value=""></option>
+	<option value="Vegetarian">Vegetarian</option>
+	<option value="Vegetarian(organic)">Vegetarian(organic)</option>
+    <option value="GlutenFree">GlutenFree</option>
+    <option value="GlutenFree(organic)">GlutenFree(organic)</option>
+    <option value="Both">Both</option>
+    <option value="Both(organic)">Both(organic)</option>
+    <option value="None">None</option>
+    <option value="None(organic)">None(organic)</option>
+    </select>-->
+    <input type="radio" id="Vegetarian" name="dietSelect" value="Vegetarian" onchange="populateListProductChoices(this.id, 'displayProduct')" > Vegetarian<br>
+    <input type="radio" id="Vegetarian(organic)" name="dietSelect" value="Vegetarian(organic)" onchange="populateListProductChoices(this.id, 'displayProduct')" > Vegetarian(organic)<br>
+    <input type="radio" id="GlutenFree" name="dietSelect" value="GlutenFree" onchange="populateListProductChoices(this.id, 'displayProduct')" > GlutenFree<br>
+    <input type="radio" id="GlutenFree(organic)" name="dietSelect" value="GlutenFree(organic)" onchange="populateListProductChoices(this.id, 'displayProduct')" > GlutenFree(organic)<br>
+    <input type="radio" id="Both" name="dietSelect" value="Both" onchange="populateListProductChoices(this.id, 'displayProduct')" > Both<br>
+    <input type="radio" id="Both(organic)" name="dietSelect" value="Both(organic)" onchange="populateListProductChoices(this.id, 'displayProduct')" > Both(organic)<br>
+    <input type="radio" id="None" name="dietSelect" value="None" onchange="populateListProductChoices(this.id, 'displayProduct')" > None<br>
+    <input type="radio" id="None(organic)" name="dietSelect" value="None(organic)" onchange="populateListProductChoices(this.id, 'displayProduct')" > None(organic)<br>
+	<br>
+	<button class="tablinks" onclick="openInfo(event, 'Products')">See the Products</button>
+</div>
+
+<div id="Products" class="tabcontent">
+	<br>
+	<br>
+  <h3>Your targeted products</h3>
+  <p>We preselected products based on your diet preferences.</p>
+	 Choose items to buy:
+	 <div id="myBtnContainer">
+	 	<button  class="btn active" onclick="filterSelection('all')"> Show all</button>
+	 	<button  class="btn" onclick="filterSelection('f')"> Fruit</button>
+	 	<button  class="btn" onclick="filterSelection('v')"> Vegetable</button>
+	 	<button  class="btn" onclick="filterSelection('b')"> Bakery</button>
+	 	<button  class="btn" onclick="filterSelection('m')"> Meat</button>
+	 </div>
+
+	 <div class="container" id="displayProduct">
+	 </div>
+
+	 <button id="addCart" type="button" class="block" onclick="selectedItems()" >
+		Add selected items to cart.
+	</button>
+	<br>
+	<button class="tablinks" onclick="openInfo(event, 'Cart')">Go To Cart</button>
+	<br>
+
+
+</div>
+
+<div id="Cart" class="tabcontent">
+	<br>
+	<br>
+  <h3>Cart</h3>
+  <p>Your shopping cart</p>
+  <div id="displayCart"></div>
+</div>
+
+
+<p id="signature">Site created by Zhuoqun Pan</p>	
+
+<script src="scripts/groceries.js"></script>
+<script src="scripts/main.js"></script>
+
+</body>
