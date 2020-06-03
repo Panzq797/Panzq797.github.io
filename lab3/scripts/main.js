@@ -50,7 +50,7 @@ function populateListProductChoices(slct1, slct2) {
 		var checkbox = document.createElement("input");
 		checkbox.type = "checkbox";
 		checkbox.name = "product";
-		checkbox.value = productName;
+		checkbox.value = images/productName;
 		s2.appendChild(checkbox);
 
 		
