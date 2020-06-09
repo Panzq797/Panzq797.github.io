@@ -83,7 +83,7 @@ function populateListProductChoicesFruit(slct1, slct2) {
 
 
 		var elem = document.createElement("img");
-		elem.setAttribute("src", "images/"+productName+".JPG");
+		elem.setAttribute("src", "lab3/images/"+productName+".JPG");
 		elem.setAttribute("height", "70");
 		elem.setAttribute("width", "70");
 		s2.appendChild(elem);
