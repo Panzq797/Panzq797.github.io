@@ -83,7 +83,7 @@ function populateListProductChoicesFruit(slct1, slct2) {
 
 
 		var elem = document.createElement("img");
-		elem.setAttribute("src", "images/"+productName+".jpg");
+		elem.setAttribute("src", "images/"+productName+".JPG");
 		elem.setAttribute("height", "70");
 		elem.setAttribute("width", "70");
 		s2.appendChild(elem);
@@ -131,7 +131,7 @@ function populateListProductChoicesVegetable(slct1, slct2) {
 
 
 		var elem = document.createElement("img");
-		elem.setAttribute("src", "images/"+productName+".jpg");
+		elem.setAttribute("src", "images/"+productName+".JPG");
 		elem.setAttribute("height", "70");
 		elem.setAttribute("width", "70");
 		s2.appendChild(elem);
@@ -179,7 +179,7 @@ function populateListProductChoicesBakery(slct1, slct2) {
 
 
 		var elem = document.createElement("img");
-		elem.setAttribute("src", "images/"+productName+".jpg");
+		elem.setAttribute("src", "images/"+productName+".JPG");
 		elem.setAttribute("height", "70");
 		elem.setAttribute("width", "70");
 		s2.appendChild(elem);
@@ -227,7 +227,7 @@ function populateListProductChoicesMeat(slct1, slct2) {
 
 
 		var elem = document.createElement("img");
-		elem.setAttribute("src", "images/"+productName+".jpg");
+		elem.setAttribute("src", "images/"+productName+".JPG");
 		elem.setAttribute("height", "70");
 		elem.setAttribute("width", "70");
 		s2.appendChild(elem);
