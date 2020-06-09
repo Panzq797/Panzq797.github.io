@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+	<title>Fran's grocery store</title>
+</head>
+
+<body>
+	<h1>Welcome to Fran's Grocery Store</h1>
+
+<div class="dropdown">
+    <button class="dropbtn">Click here to start shopping
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button><br>
+      <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button><br>
+      <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button><br>
+      <br>
+    </div>
+  </div>
+<!-- Tab links, each one with an onclick event associated with it -->
+
+
+<!-- Tab content -->
+<div id="Client" class="tabcontent">
+	<br>
+	<br>
+  <h3>Client Information</h3>
+  <p>Tell us a bit about you.</p>
+	Choose your dietary need:<br>
+	<!--<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
+	<option value=""></option>
+	<option value="Vegetarian">Vegetarian</option>
+	<option value="Vegetarian(organic)">Vegetarian(organic)</option>
+    <option value="GlutenFree">GlutenFree</option>
+    <option value="GlutenFree(organic)">GlutenFree(organic)</option>
+    <option value="Both">Both</option>
+    <option value="Both(organic)">Both(organic)</option>
+    <option value="None">None</option>
+    <option value="None(organic)">None(organic)</option>
+    </select>-->
+    <input type="radio" id="Vegetarian" name="dietSelect" value="Vegetarian" onchange="populateListProductChoicesFruit(this.id, 'displayProductFruit');populateListProductChoicesVegetable(this.id, 'displayProductVegetable');populateListProductChoicesBakery(this.id, 'displayProductBakery');populateListProductChoicesMeat(this.id, 'displayProductMeat')"> Vegetarian<br>
+    <input type="radio" id="Vegetarian(organic)" name="dietSelect" value="Vegetarian(organic)" onchange="populateListProductChoicesFruit(this.id, 'displayProductFruit');populateListProductChoicesVegetable(this.id, 'displayProductVegetable');populateListProductChoicesBakery(this.id, 'displayProductBakery');populateListProductChoicesMeat(this.id, 'displayProductMeat')"> Vegetarian(organic)<br>
+    <input type="radio" id="GlutenFree" name="dietSelect" value="GlutenFree" onchange="populateListProductChoicesFruit(this.id, 'displayProductFruit');populateListProductChoicesVegetable(this.id, 'displayProductVegetable');populateListProductChoicesBakery(this.id, 'displayProductBakery');populateListProductChoicesMeat(this.id, 'displayProductMeat')"> GlutenFree<br>
+    <input type="radio" id="GlutenFree(organic)" name="dietSelect" value="GlutenFree(organic)" onchange="populateListProductChoicesFruit(this.id, 'displayProductFruit');populateListProductChoicesVegetable(this.id, 'displayProductVegetable');populateListProductChoicesBakery(this.id, 'displayProductBakery');populateListProductChoicesMeat(this.id, 'displayProductMeat')"> GlutenFree(organic)<br>
+    <input type="radio" id="Both" name="dietSelect" value="Both" onchange="populateListProductChoicesFruit(this.id, 'displayProductFruit');populateListProductChoicesVegetable(this.id, 'displayProductVegetable');populateListProductChoicesBakery(this.id, 'displayProductBakery');populateListProductChoicesMeat(this.id, 'displayProductMeat')" > Both<br>
+    <input type="radio" id="Both(organic)" name="dietSelect" value="Both(organic)" onchange="populateListProductChoicesFruit(this.id, 'displayProductFruit');populateListProductChoicesVegetable(this.id, 'displayProductVegetable');populateListProductChoicesBakery(this.id, 'displayProductBakery');populateListProductChoicesMeat(this.id, 'displayProductMeat')"> Both(organic)<br>
+    <input type="radio" id="None" name="dietSelect" value="None"onchange="populateListProductChoicesFruit(this.id, 'displayProductFruit');populateListProductChoicesVegetable(this.id, 'displayProductVegetable');populateListProductChoicesBakery(this.id, 'displayProductBakery');populateListProductChoicesMeat(this.id, 'displayProductMeat')"> None<br>
+    <input type="radio" id="None(organic)" name="dietSelect" value="None(organic)" onchange="populateListProductChoicesFruit(this.id, 'displayProductFruit');populateListProductChoicesVegetable(this.id, 'displayProductVegetable');populateListProductChoicesBakery(this.id, 'displayProductBakery');populateListProductChoicesMeat(this.id, 'displayProductMeat')" > None(organic)<br>
+	<br>
+	<button class="tablinks" onclick="openInfo(event, 'Products')">See the Products</button>
+</div>
+
+<div id="Products" class="tabcontent">
+	<br>
+	<br>
+  <h3>Your targeted products</h3>
+  <p>We preselected products based on your diet preferences.</p>
+	 Choose items to buy:
+	 <div class="tab">
+	 	<button class="tablinkss" onclick="openInf(event, 'displayProduct1')">Fruit</button>
+	 	<button class="tablinkss" onclick="openInf(event, 'displayProduct2')">Vegetable</button>
+	 	<button class="tablinkss" onclick="openInf(event, 'displayProduct3')">Bakery</button>
+	 	<button class="tablinkss" onclick="openInf(event, 'displayProduct4')">Meat</button>
+	 </div>
+	 
+
+	 
+	 <div  id="displayProduct1" class="tabcontentt">
+	 	<div id="displayProductFruit"></div>
+	 </div>
+	 <div  id="displayProduct2" class="tabcontentt">
+	 	<div id="displayProductVegetable"></div>
+	 </div>
+	 <div  id="displayProduct3" class="tabcontentt">
+	 	<div id="displayProductBakery"></div>
+	 </div>
+	 <div  id="displayProduct4" class="tabcontentt">
+	 	<div id="displayProductMeat"></div>
+	 </div>
+
+
+	 <button id="addCart" type="button" class="block" onclick="selectedItems()" >
+		Add selected items to cart.
+	</button>
+	<br>
+	<button class="tablinks" onclick="openInfo(event, 'Cart')">Go To Cart</button>
+	<br>
+
+
+</div>
+
+<div id="Cart" class="tabcontent">
+	<br>
+	<br>
+  <h3>Cart</h3>
+  <p>Your shopping cart</p>
+  <div id="displayCart"></div>
+</div>
+
+
+<p id="signature">Site created by Zhuoqun Pan</p>	
+
+<script src="scripts/groceries.js"></script>
+<script src="scripts/main.js"></script>
+
+</body>
