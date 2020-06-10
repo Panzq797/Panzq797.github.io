@@ -1,0 +1,359 @@
+<!-- This file contains many elements adapted from the online tutoral -->
+<!-- on Bootstrap 4 as found here: https://www.w3schools.com/bootstrap4/default.asp -->
+
+<!-- Images source: -->
+<!-- jule.jpg taken from https://www.freepik.com/premium-vector/cartoon-successful-hairdresser_3951066.htm -->
+<!-- Erwind.jpb https://www.kijiji.ca/v-construction-trades-jobs/winnipeg/bicycle-mechanic/1499188319 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- The head should contain an appropriate title for your site -->
+<head>
+    <title>Hair Salon</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
+
+    <!-- Your own additional style sheet -->
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+
+
+<body>
+
+    <!-- Medium size container, padding 3, margins 3, background dark, text is white -->
+    <!-- Should show the name of your company with an image or logo -->
+    <!-- Bootstrap has its own font for H1, H2, p, etc.  -->
+    <!-- Look in BS4 Typography https://www.w3schools.com/bootstrap4/bootstrap_typography.asp -->
+    <!-- Use your own CSS file to change those fonts if they do not correspond to your company's look -->
+    <div class="container-md p-3 my-3 border  text-white">
+        <img src="images/logo.jpg" width="200" height="80">
+        <h1 style="font-family: Grorgia">Welcome to Not Your Father's Barber</h1>
+    </div>
+    <div class="container">
+        <div class="alert alert-danger alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Due to COVID-19, our shop is temporarily closed. </strong>
+        </div>
+    </div>
+
+    <!-- Bootstrap contains a grid system you can explore https://www.w3schools.com/bootstrap4/bootstrap_grid_system.asp -->
+    <!-- It can be useful for placement of information -->
+    <div class="row p-3">
+        <div class="col-sm-3 pl-5" style="color:#CCCCCC" >Service</div>
+        <div class="col-sm-3" style="color:#CCCCCC">Calendar</div>
+        <div class="col-sm-3" style="color:#CCCCCC">Payment</div>
+        <div class="col-sm-3" style="color:#CCCCCC">Where to find us</div>
+    </div>
+
+    <!-- When you have messages to tell, remember that center align is not always the best choice -->
+    <div class="container-md p-3 my-3   text-success">
+        <h2 style="color:#FFFFFF">Let us show some haircuts</h2><br>
+        <div class="card-columns" >
+            <img class="card-img-top" src="images/haircut1.jpg" alt="Card image" width="300" height="300">
+            <img class="card-img-top" src="images/haircut4.jpg" alt="Card image" width="300" height="300">
+            <img class="card-img-top" src="images/haircut2.jpg" alt="Card image" width="300" height="300">
+            <img class="card-img-top" src="images/haircut3.jpg" alt="Card image" width="300" height="300">
+            <img class="card-img-top" src="images/haircut6.jpg" alt="Card image" width="300" height="300">
+            <img class="card-img-top" src="images/haircut5.jpg" alt="Card image" width="300" height="300">
+        </div>
+    </div>
+
+
+    <!-- Bootstrap has different types of tables https://www.w3schools.com/bootstrap4/bootstrap_tables.asp -->
+    <!-- Might be (or not) useful to show some information to the user -->
+    <div class="container-md p-3 my-3 text-success">
+        
+        <h2 style="color:#FFFFFF">Our Services</h2><br>       
+        <table class="table table-black table-hover">
+            <thead>
+            <tr>
+                <th>Service</th>
+                <th>Price</th>
+                <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Classic Cut</td>
+                <td>ADULT (13-59)...25$ <br>SEASONED VETS (60+)...21$ <br>ROOKIES (12&U)...21$ <br>FATHER & SON (12&U)...39$</td>
+                <td>For our active roster (13-59)<br>For our experienced guys (60+)<br>For our junior players (12&U)<br>Combo for Dad and Son</td>
+            </tr>
+            <tr>
+                <td>The Shaves</td>
+                <td>THE CLASSIC...20$<br>THE DELUXE...30$<br>THE HEAD SHAVE...40$</td>
+                <td>Face shave with cream and after-shave<br>Hot towel face shave with oil treatment<br>Hot towel head shave with oil treatment</td>
+            </tr>
+            <tr>
+                <td>The Treatment</td>
+                <td>SCALP TREATMENT...15$<br>WITH CUT...10$</td>
+                <td>10 minute treatment<br>Scalp treatment combined with any cut</td>
+            </tr>
+            <tr>
+                <td>The Packages</td>
+                <td>TOUCHDOWN...38$<br>DOUBLE PLAY...50$<br>THE HAT TRICK...60$</td>
+                <td>Classic cut including a facial trim<br>Wash with scalp massage<br>Wash with scalp massage and scalp treatment</td>
+            </tr>
+            <tr>
+                <td>The Add-ons</td>
+                <td>FACIAL TRIM...10$<br>TRIM & OUTLINE...15$<br>WASH...5$</td>
+                <td>Hair wash with scalp massage<br>Stache, goatee or beard trim with clippers<br>Facial hair trim and razor shave outline</td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+
+    <!-- Bootstrap has components for alerts: https://www.w3schools.com/bootstrap4/bootstrap_alerts.asp  -->
+    <!-- These can be useful for making sure someone reads something before continuing -->
+    
+
+    <!-- You'll certainly need buttons at some point in your site -->
+    <!-- https://www.w3schools.com/bootstrap4/bootstrap_buttons.asp -->
+    <!-- Remember how we talked about choosing a hue and changing the saturation for active/inactive -->
+    <!-- This idea is already part of the components in Bootstrap -->
+    <!--<div class="container">
+        <h2>Button States</h2>
+        <button type="button" class="btn btn-warning">Primary Button</button>
+        <button type="button" class="btn btn-warning active">Active Primary</button>
+        <button type="button" class="btn btn-warning" disabled>Disabled Primary</button>
+    </div>
+    -->
+
+
+    <!-- Including a modal https://www.w3schools.com/bootstrap4/bootstrap_modal.asp -->
+    <!-- Modals are useful for additional information or questions -->
+    <!-- Here the modal is used for a little survey -->
+   
+
+    <!-- Presenting the staff with cards: https://www.w3schools.com/bootstrap4/bootstrap_cards.asp -->
+    <!-- Card columns allows multiple cards next to each other -->
+    <!-- The first card's button doesn't go anywhere, it could be a modal --> 
+    <!-- My second card limits the information seen and uses collapsible to show more -->
+    <div class="container-md p-3 my-3 bg-#333333 text-success">
+        <h2 style="color:#FFFFFF">Meet our hairdressers</h2><br>
+        <div class="card-columns">
+            <div class="card bg-dark" style="width:200px">
+                <img class="card-img-top" src="images/Zach.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title" >Zach</h4>
+                    <h6 >Favourite technique: </h6>
+                    <p class="card-text" >Fades. Everyone should have a fade. </p>
+                    <a href="#profilee" class="btn btn-primary" data-toggle="collapse">See Profile</a>
+                    <div id="profilee" class="collapse p-3">
+                        <h6>Barber perks:</h6>
+                        <p>Clients walk around all day showcasing his “art” on their heads.  </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card bg-dark" style="width:200px">
+                <img class="card-img-top" src="images/Patrick.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Patrick</h4>
+                    <h6>Favourite technique: </h6>
+                    <p class="card-text">Classic styles performed freestyle, scissors and clippers over comb. </p>
+                    <!-- collapsible part -->
+                    <a href="#profile" class="btn btn-primary" data-toggle="collapse">See Profile</a>
+                    <div id="profile" class="collapse p-3">
+                        <h6>Barber perks:</h6>
+                        <p>Being part of a neighbourhood community while providing an age-old stress relieving service. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card bg-dark" style="width:200px">
+                <img class="card-img-top" src="images/Nakita.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Nakita</h4>
+                    <h6>Favourite technique: </h6>
+                    <p class="card-text">Clipper over comb. Loves the control and consistency it allows.</p>
+                    <!-- collapsible part -->
+                    <a href="#profileee" class="btn btn-primary" data-toggle="collapse">See Profile</a>
+                    <div id="profileee" class="collapse p-3">
+                        <h6>Barber perks:</h6>
+                        <p>Being able to provide a variety of services that help people feel good about themselves and improves their confidence. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <div class="container">
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#mySurvey" style="font-family: Arial;">Please take the quick survey to get $5 OFF</button>
+          
+        <!-- Modal -->
+        <div class="modal fade" id="mySurvey" role="dialog">
+            <div class="modal-dialog">  
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <h4 style="color: black">What do you think makes you visit the same barber shop again? </h4>
+                        <form>
+                          <div class="checkbox">
+                            <label><input type="checkbox" value="">Familiar barber shop</label>
+                          </div>
+                          <div class="checkbox">
+                            <label><input type="checkbox" value="">Good hair styling</label>
+                          </div>
+                          <div class="checkbox">
+                            <label><input type="checkbox" value=""> Good service attitude</label>
+                          </div>
+                          <div class="checkbox">
+                            <label><input type="checkbox" value="">Fashionable and professional store</label>
+                          </div>
+                          <div class="checkbox">
+                            <label><input type="checkbox" value="">Other</label>
+                          </div>
+
+                        </form>
+                        <h4 style="color: black">How do you know us?</h4>
+                        <form>
+                          <div class="checkbox">
+                            <label><input type="checkbox" value="">Friend introduction</label>
+                          </div>
+                          <div class="checkbox">
+                            <label><input type="checkbox" value="">Flyer advertisement</label>
+                          </div>
+                          <div class="checkbox">
+                            <label><input type="checkbox" value="">Passing by to see</label>
+                          </div>
+                          <div class="checkbox">
+                            <label><input type="checkbox" value="">I Network power</label>
+                          </div>
+                          <div class="checkbox">
+                            <label><input type="checkbox" value="">other</label>
+                          </div>
+                        </form>
+
+                        </form>
+                        <h4 style="color: black">When choosing a barber shop, what do you value most?</h4>
+                        <form>
+                          <div class="checkbox">
+                            <label><input type="checkbox" value="">Barber's technical power</label>
+                          </div>
+                          <div class="checkbox">
+                            <label><input type="checkbox" value="">Hairdressing supplies used in barber shops</label>
+                          </div>
+                          <div class="checkbox">
+                            <label><input type="checkbox" value="">Barber shop prices</label>
+                          </div>
+                          <div class="checkbox">
+                            <label><input type="checkbox" value="">Barbershop decoration</label>
+                          </div>
+                          <div class="checkbox">
+                            <label><input type="checkbox" value="">Barber shop service quality</label>
+                          </div>
+                          <div class="checkbox">
+                            <label><input type="checkbox" value="">The popularity of the barber shop</label>
+                          </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>     
+        </div>
+        </div>    
+    </div>
+
+
+    <!-- A different approach would be to make the whole staff information collapsible -->
+    <!-- Here a block button (taking the full width) opens/closes the collapsible -->
+    <!-- Here a single card is used, but card columns could be used -->
+    <!--
+    <div class="container">
+        <h2>More information</h2>
+        <a href="#mechanics" class="btn btn-primary btn-block" data-toggle="collapse">Meet our mechanics</a>
+        <div id="mechanics" class="collapse">
+            <div class="card bg-warning" style="width:200px">
+                <img class="card-img-top" src="images/Erwind.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Erwind</h4>
+                    <p class="card-text">Erwind knows all about bikes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    -->
+
+    <!-- Collapsible with multiple items - accordion -->
+    <!-- https://www.w3schools.com/bootstrap4/bootstrap_collapse.asp -->
+    <!-- As we want to do a vertical navigation better suited for mobile design, an accordion pattern -->
+    <!-- could work well.  You can use other patterns too.  This is just an example. -->
+
+    <div class="container">
+        
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header">
+                    <a class="card-link" data-toggle="collapse" href="#collapseService">Choose a service</a>
+                </div>
+                <div id="collapseService" class="collapse show" data-parent="#accordion">
+                    <div class="card-body">
+                        <p style="color: black" style="">Here is our list of services</p>
+                        <select id="service">
+                            <option value="Null" selected="selected"></option>
+                            <option value="Classic Cut">Classic Cut</option>
+                            <option value="The Shaves">The Shaves</option>
+                            <option value="The Treatment">The Treatment</option>
+                            <option value="The Packages">The Packages</option>
+                            <option value="The Add-ons">The Add-ons</option>
+                        </select>
+                    </div>
+                </div>
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseDate">Choose a date</a>
+                </div>
+                <div id="collapseDate" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <p>What date?</p>
+                        <div class="form-group row">
+                            <label for="dateTimeInput" class="col-2 col-form-label">Date and time</label>
+                            <div class="col-10">
+                                <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="dateTimeInput">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo">Your info</a>
+                </div>
+                <div id="collapseClientInfo" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <p>Your information so we can contact you</p>
+                        <p>Name: <input type="text" name="name"></p>
+                        <p>Email address: <input type="text" name="emailaddress"></p>
+                        <p>Phone: <input type="text" name="phone"></p>
+                    </div>
+                </div>
+            </div>
+            <button id="submitButton" type="submit" value="Submit" class="block">SUBMIT THE APPOINTMENT</button>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="container-md p-3 my-3  bg-#333333 text-white">
+            <h8> Address: 91 Murray Street, Ottawa, ON, K1N 5M5</h8><br>
+            <h8> Phone: 613-695-NYFB (6932)</h8><br>
+            <h8> Email: Aaron@notyourfathersbarber.com</h8><br>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+
+/* Style sheet
+   color picker www.w3schools.com/colors/colors_picker.asp
+*/
+
+/* Bootstrap default font-family is Helvetica Neue */
+h1 {
+  font-family: "Times New Roman", Times, serif;
+  text-shadow: 3px 3px 1px black;
+  
+}
+body {
+  background-color: black;
+}
+
+p {
+  color: white;
+}
+
+h6 {
+  color: white;
+  font-family: Arial;
+}
+h4 {
+  color: white;
+  font-family: Arial;
+  font-weight: 500;
+}
+td {
+  color: white;
+  font-family: Arial;
+  font-size:15px;
+}
+th {
+  color: white;
+  font-family: Arial;
+  font-size:18px;
+}
+h2 {
+  font-family: Georgia;
+}
+.button{
+	font-family: Arial;
+}
