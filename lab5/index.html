@@ -1,0 +1,348 @@
+<!-- This file contains a few elements adapted from the online tutoral -->
+<!-- on Bootstrap 4 as found here: https://www.w3schools.com/bootstrap4/default.asp -->
+<!-- as well as JQuery found here: https://www.w3schools.com/jquery/default.asp -->
+
+<!-- Images source: -->
+<!-- The two icons come from this bank of icons: https://icons8.com/icons.  I used the free downloadable ones.-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- The head should contain an appropriate title for your site -->
+<head>
+    <title>Hair Salon</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use JQuery as well as JQueryUI library -->
+    <!-- which is built on top of JQuery and offers additional possibilities -->
+    <!-- For example, JQuery UI has a datepicker which is popular and that we can use -->
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
+    <!-- Your own script -->
+    <script src="scripts/service.js"></script>
+
+    <!-- Your own additional style sheet -->
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<!-- Using the collapsible Navbar, so we see the hamburger menu icon -->
+<!-- It really has become a standard. -->
+<!-- As your page is a vertical page (Module 4 requirement), you mus use the navbar -->
+<!-- to just jump to parts of the page. What I put as First/Second/Third here would -->
+<!-- be sections in your page. -->
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <img src="images/logo.jpg" width="200" height="80">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#first"><img src="images/haircut.png" alt="logo" style="width:30px;">Haircuts</a>
+      </li> 
+      <li class="nav-item">
+        <a class="nav-link" href="#second"><img src="images/service.png" alt="logo" style="width:30px;">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#third"><img src="images/hairdresser.png" alt="logo" style="width:30px;">Hairdressers</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#fourth"><img src="images/appointment.png" alt="logo" style="width:30px;">Appointment</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#fifth"><img src="images/where.png" alt="logo" style="width:30px;">Where to find us</a>
+      </li>   
+   </ul>
+  </div>  
+</nav>
+<br>
+
+<div class="container">
+  <div class="alert alert-danger alert-dismissible">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong>Due to COVID-19, our business hours will change. </strong>
+  </div>
+</div>
+
+<!-- Just arbitrary divisions to see the link from the NavBar -->
+<!-- Also, notice the use of the icon repeated from the menu to add grouping -->
+<div class="container" id="first">
+  <h3><img src="images/haircut.png" alt="logo" style="width:40px;">Show Some Haircuts</h3>
+  <div class="card-columns" >
+    <img class="card-img-top" src="images/haircut1.jpg" alt="Card image" width="300" height="300">
+    <img class="card-img-top" src="images/haircut4.jpg" alt="Card image" width="300" height="300">
+    <img class="card-img-top" src="images/haircut2.jpg" alt="Card image" width="300" height="300">
+    <img class="card-img-top" src="images/haircut3.jpg" alt="Card image" width="300" height="300">
+    <img class="card-img-top" src="images/haircut6.jpg" alt="Card image" width="300" height="300">
+    <img class="card-img-top" src="images/haircut5.jpg" alt="Card image" width="300" height="300">
+  </div>
+</div>
+<br>
+<br>
+
+<div class="container" id="second">
+  <h3><img src="images/service.png" alt="logo" style="width:40px;">Our Services</h3>
+  <table class="table table-black table-hover">
+    <thead>
+      <tr>
+        <th>Service</th>
+        <th>Price</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Classic Cut</td>
+        <td>ADULT (13-59)...25$ <br>SEASONED VETS (60+)...21$ <br>ROOKIES (12&U)...21$ <br>FATHER & SON (12&U)...39$</td>
+        <td>For our active roster (13-59)<br>For our experienced guys (60+)<br>For our junior players (12&U)<br>Combo for Dad and Son</td>
+      </tr>
+      <tr>
+        <td>The Shaves</td>
+        <td>THE CLASSIC...20$<br>THE DELUXE...30$<br>THE HEAD SHAVE...40$</td>
+        <td>Face shave with cream and after-shave<br>Hot towel face shave with oil treatment<br>Hot towel head shave with oil treatment</td>
+      </tr>
+      <tr>
+        <td>The Treatment</td>
+        <td>SCALP TREATMENT...15$<br>WITH CUT...10$</td>
+        <td>10 minute treatment<br>Scalp treatment combined with any cut</td>
+      </tr>
+      <tr>
+        <td>The Packages</td>
+        <td>TOUCHDOWN...38$<br>DOUBLE PLAY...50$<br>THE HAT TRICK...60$</td>
+        <td>Classic cut including a facial trim<br>Wash with scalp massage<br>Wash with scalp massage and scalp treatment</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- This section contains elements to be validated -->
+<!-- Refer to the JavaScript file, where JQuery is used to listen to those inputs using the ids -->
+<div class="container" id="third">
+  <h3><img src="images/hairdresser.png" alt="logo" style="width:40px;">Meet Our Hairdressers</h3>
+ <div class="card-columns">
+  <div class="card" style="width:200px">
+    <img class="card-img-top" src="images/Zach.jpg" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title" >Zach</h4>
+      <h6>Monday-Wednesday-Thursday-Friday</h6>
+      <h6>Favourite technique: </h6>
+      <p class="card-text" >Fades. Everyone should have a fade. </p>
+      <a href="#profilee" class="btn btn-primary" data-toggle="collapse">See Profile</a>
+      <div id="profilee" class="collapse p-3">
+        <h6>Barber perks:</h6>
+        <p>Clients walk around all day showcasing his “art” on their heads.  </p>
+      </div>
+    </div>
+  </div>
+  <div class="card" style="width:200px">
+    <img class="card-img-top" src="images/Patrick.jpg" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title">Patrick</h4>
+      <h6>Tuesday-Wednesday-Friday</h6>
+      <h6>Favourite technique: </h6>
+      <p class="card-text">Classic styles performed freestyle, scissors and clippers over comb. </p>
+      <!-- collapsible part -->
+      <a href="#profile" class="btn btn-primary" data-toggle="collapse">See Profile</a>
+      <div id="profile" class="collapse p-3">
+        <h6>Barber perks:</h6>
+        <p>Being part of a neighbourhood community while providing an age-old stress relieving service. </p>
+      </div>
+    </div>
+  </div>
+  <div class="card" style="width:200px">
+    <img class="card-img-top" src="images/Nakita.jpg" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title">Nakita</h4>
+      <h6>Monday-Tuesday-Thursday</h6>
+      <h6>Favourite technique: </h6>
+      <p class="card-text">Clipper over comb. Loves the control and consistency it allows.</p>
+      <!-- collapsible part -->
+      <a href="#profileee" class="btn btn-primary" data-toggle="collapse">See Profile</a>
+      <div id="profileee" class="collapse p-3">
+        <h6>Barber perks:</h6>
+        <p>Being able to provide a variety of services that help people feel good about themselves and improves their confidence. </p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<br>
+
+<div class="container" id="fourth">
+  <h3><img src="images/appointment.png" alt="logo" style="width:40px;">Make An Appointment</h3>
+  <div class="container">
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#mySurvey" style="font-family: Arial;">Please take the quick survey to get $5 OFF</button>        
+  <!-- Modal -->
+  <div class="modal fade" id="mySurvey" role="dialog">
+    <div class="modal-dialog">  
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <h4 style="color: black">What do you think makes you visit the same barber shop again? </h4>
+            <form>
+              <div class="checkbox">
+                <label><input type="checkbox" value="">Familiar barber shop</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="">Good hair styling</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value=""> Good service attitude</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="">Fashionable and professional store</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="">Other</label>
+              </div>
+            </form>
+            <h4 style="color: black">How do you know us?</h4>
+            <form>
+              <div class="checkbox">
+                <label><input type="checkbox" value="">Friend introduction</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="">Flyer advertisement</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="">Passing by to see</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="">I Network power</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="">other</label>
+              </div>
+            </form>
+          </form>
+          <h4 style="color: black">When choosing a barber shop, what do you value most?</h4>
+           <form>
+            <div class="checkbox">
+              <label><input type="checkbox" value="">Barber's technical power</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="">Hairdressing supplies used in barber shops</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="">Barber shop prices</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="">Barbershop decoration</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="">Barber shop service quality</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="">The popularity of the barber shop</label>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>     
+  </div>
+</div> 
+  <div id="accordion">
+    <div class="card" >
+      <div class="card-header" >
+        <a class="card-link" data-toggle="collapse" href="#collapseService">Make an appointment with Zach</a>
+      </div>
+      <div id="collapseService" class="collapse show" data-parent="#accordion">
+        <div class="card-body">
+          <img src="images/services.png" alt="logo" style="width:30px;">Service
+          <select id="service">
+            <option value="Null" selected="selected"></option>
+            <option value="Classic Cut">Classic Cut</option>
+            <option value="The Shaves">The Shaves</option>
+            <option value="The Treatment">The Treatment</option>
+            <option value="The Packages">The Packages</option>
+          </select>
+          <p><img src="images/date.png" alt="logo" style="width:30px;">Date: <input type="text" id="dateInput1"></p>
+          <p><img src="images/name.png" alt="logo" style="width:30px;">Name: <input type="text" name="name"></p>
+          <p><img src="images/email.png" alt="logo" style="width:30px;">Email address: <input type="text" name="emailaddress"></p>
+          <p><img src="images/phone.png" alt="logo" style="width:30px;">Phone Number: <input value="(XXX)XXX-XXXX" type="text" id="phone1" ></p>
+          <p><img src="images/card.png" alt="logo" style="width:30px;">Credit Card: <input value="XXXX XXXX XXXX XXXX" type="text" id="debit1" title="We ask for your credit card number in case of no-show, 20$ will be charged."></p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <a class="collapsed card-link" data-toggle="collapse" href="#collapseDate">Make an appointment with Patrick</a>
+        </div>
+        <div id="collapseDate" class="collapse" data-parent="#accordion">
+          <div class="card-body">
+            <img src="images/services.png" alt="logo" style="width:30px;">Service
+            <select id="service">
+              <option value="Null" selected="selected"></option>
+              <option value="Classic Cut">Classic Cut</option>
+              <option value="The Shaves">The Shaves</option>
+              <option value="The Treatment">The Treatment</option>
+              <option value="The Packages">The Packages</option>
+           </select>
+           <p><img src="images/date.png" alt="logo" style="width:30px;">Date: <input type="text" id="dateInput2"></p>
+           <p><img src="images/name.png" alt="logo" style="width:30px;">Name: <input type="text" name="name"></p>
+           <p><img src="images/email.png" alt="logo" style="width:30px;">Email address: <input type="text" name="emailaddress"></p>
+           <p><img src="images/phone.png" alt="logo" style="width:30px;">Phone Number: <input value="(XXX)XXX-XXXX" type="text" id="phone2"></p>
+           <p><img src="images/card.png" alt="logo" style="width:30px;">Credit Card: <input value="XXXX XXXX XXXX XXXX" type="text" id="debit2" title="We ask for your credit card number in case of no-show, 20$ will be charged."></p>
+         </div>
+       </div>
+     </div>
+     <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo">Make an appointment with Nakita</a>
+      </div>
+      <div id="collapseClientInfo" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+          <img src="images/services.png" alt="logo" style="width:30px;">Service
+          <select id="service">
+            <option value="Null" selected="selected"></option>
+            <option value="Classic Cut">Classic Cut</option>
+            <option value="The Shaves">The Shaves</option>
+            <option value="The Treatment">The Treatment</option>
+            <option value="The Packages">The Packages</option>
+          </select>
+          <p><img src="images/date.png" alt="logo" style="width:30px;">Date: <input type="text" id="dateInput3"></p>
+          <p><img src="images/name.png" alt="logo" style="width:30px;">Name: <input type="text" name="name"></p>
+          <p><img src="images/email.png" alt="logo" style="width:30px;">Email address: <input type="text" name="emailaddress"></p>
+          <p><img src="images/phone.png" alt="logo" style="width:30px;">Phone Number: <input value="(XXX)XXX-XXXX" type="text" id="phone3"></p>
+          <p><img src="images/card.png" alt="logo" style="width:30px;">Credit Card: <input value="XXXX XXXX XXXX XXXX" type="text" id="debit3" title="We ask for your credit card number in case of no-show, 20$ will be charged."></p>
+        </div>
+      </div>
+    </div>
+    <button id="submitButton" type="submit" value="Submit" class="block">SUBMIT THE APPOINTMENT</button>
+  </div>
+</div>
+</div>
+</div>
+<br>
+<br>
+<div class="container" id="fifth">
+  <h3><img src="images/where.png" alt="logo" style="width:40px;">Where To Find Us</h3>
+    <h8> &#160;&#160;&#160;&#160;&#160;Hours: Monday – Friday: 9:00 AM to 8:00 PM</h8><br>
+    <h8> &#160;&#160;&#160;&#160;&#160;Address: 91 Murray Street, Ottawa, ON, K1N 5M5</h8><br>
+    <h8> &#160;&#160;&#160;&#160;&#160;Phone: 613-695-NYFB (6932)</h8><br>
+    <h8> &#160;&#160;&#160;&#160;&#160;Email: Aaron@notyourfathersbarber.com</h8><br>
+</div>   
+
+
+</body>
+</html>
+
+
