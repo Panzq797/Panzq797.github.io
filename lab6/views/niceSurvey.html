@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <title>Questionnaire</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/assets/style.css" rel="stylesheet" type="text/css"/>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
+
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+  </head>
+  
+  <body>
+	
+	<div class="container-md p-3 my-3 border bg-light text-dark" id="survey">
+    <h1><strong>Survey about User Interface</strong></h1>
+    <form>
+      <h2>What do you think of the UI in this <a href="https://www.amazon.ca">Amazon</a> site?</h2>	
+      <br>
+      <img src="/assets/amazon.JPG" alt="https://www.amazon.ca" width="1000" height="500" class="img-rounded"> 
+      <br>
+      <br>
+      <h2> Personal Information </h2><br>
+      <h4>First name: <input type="text" name="firstname" placeholder="first name..." required/></h4><br>
+      <h4>Last name: <input type="text" name="lastname" placeholder="last name..." required/></h4><br>
+      <h4>Email address: <input type="text" name="emailaddress" placeholder="email address..." required/></h4><br>
+
+      <h2> Which part are you satisfied with?</h2>
+      <h4><input type="checkbox" name="part" value="System speed">System speed</h4>
+      <h4><input type="checkbox" name="part" value="System reliability">System reliability</h4>
+      <h4><input type="checkbox" name="part" value="Interface design of the system">Interface design of the system</h4><br>
+
+      <h2>What do you find best?</h2>
+      <h4><input type="radio" id="male" name="gender" value="Ease of use">Ease of use</h4>
+      <h4><input type="radio" id="female" name="gender" value="Interface design">Interface design</h4>
+      <h4><input type="radio" id="other" name="gender" value="Features provide">Features provide</h4>
+      <h4><input type="radio" id="other" name="gender" value="Quality of the output">Quality of the output</h4>
+      <h4><input type="radio" id="other" name="gender" value="Other">Other</h4><br>
+
+      <h2>What is your opinion about organization of information on the screen?</h2>
+      <h4><input type="radio" id="male" name="gen" value="Confusing">Confusing</h4>
+      <h4><input type="radio" id="female" name="gen" value="Normal">Normal</h4>
+      <h4><input type="radio" id="other" name="gen" value="Clear">Clear</h4><br>
+
+      <h2>What is the most difficult operation?</h2>
+      <h4><select name="favorite">
+        <option value="Learning to operate the system" selected="selected">Learning to operate the system</option>
+        <option value="To understand help messages on screen">To understand help messages on screen</option>
+        <option value="Exploring new features by trial and error">Exploring new features by trial and error</option>
+        <option value="Remembering names and commands used">Remembering names and commands used</option>
+        <option value="All operations are fine">All operations are fine</option>
+      </select></h4><br>
+
+      <h2>What do you think about the overall?</h2>
+      <h4><ul class="likert">
+        <li> Very good </li>
+        <li><input type="radio" name="guilty" value="Very good" /></li>
+        <li><input type="radio" name="guilty" value="Good" /></li>
+        <li><input type="radio" name="guilty" value="Normal" /></li>
+        <li><input type="radio" name="guilty" value="Bad" /></li>
+        <li><input type="radio" name="guilty" value="Very bad" /></li>
+        <li> Very bad</li>
+      </ul></h4><br><br><br>
+
+      <h2>Are there are comments/suggestion that can help improve the user interface?</h2>
+      <textarea name="zzz" rows="10" cols="160"></textarea><br>
+    
+      
+      <button type="submit" class="btn btn-warning" id="bb">Submit</button>
+      <p id="thanks"></p>
+    </form>
+  </div>
+	<script src="/assets/action.js"></script>
+  </body>
+</html> 

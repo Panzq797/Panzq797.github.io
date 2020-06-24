@@ -1,0 +1,66 @@
+<html lang="en-US">
+<head>
+    <title>Survey Analysis</title>
+</head>
+
+<body>
+    <h1>Survey analysis</h1>
+    <h2>First Name</h2>
+    <ul>
+    <% for (var i=0; i<results[2].length; i++){ %>
+        <li><%= results[2][i].firstname %> :  <%= results[2][i].count %></li>
+    <% } %>    
+    </ul>
+    <h2>Last Name</h2>
+    <ul>
+    <% for (var i=0; i<results[6].length; i++){ %>
+        <li><%= results[6][i].lastname %> :  <%= results[6][i].count %></li>
+    <% } %>    
+    </ul>
+    <h2>Email Address</h2>
+    <ul>
+    <% for (var i=0; i<results[0].length; i++){ %>
+        <li><%= results[0][i].emailaddress %> :  <%= results[0][i].count %></li>
+    <% } %>    
+    </ul>
+    <h2>Which part are you satisfied with?</h2>
+    <ul>
+    <% for (var i=0; i<results[7].length; i++){ %>
+        <li><%= results[7][i].part %> :  <%= results[7][i].count %></li>
+    <% } %>    
+    </ul>
+    <h2>What do you find best?</h2>
+    <ul>
+    <% for (var i=0; i<results[4].length; i++){ %>
+        <li><%= results[4][i].gender %> :  <%= results[4][i].count %></li>
+    <% } %>    
+    </ul>
+    <h2>What is your opinion about organization of information on the screen?</h2>
+    <ul>
+    <% for (var i=0; i<results[3].length; i++){ %>
+        <li><%= results[3][i].gen %> :  <%= results[3][i].count %></li>
+    <% } %>    
+    </ul>
+    <h2>What is the most difficult operation?</h2>
+    <ul>
+    <% for (var i=0; i<results[1].length; i++){ %>
+        <li><%= results[1][i].favorite %> :  <%= results[1][i].count %></li>
+    <% } %>    
+    </ul>
+    <h2>What do you think about the overall?</h2>
+    <ul>
+    <% for (var i=0; i<results[5].length; i++){ %>
+        <li><%= results[5][i].guilty %> :  <%= results[5][i].count %></li>
+    <% } %>    
+    </ul>
+    <h2>Are there are comments/suggestion that can help improve the user interface?</h2>
+    <ul>
+    <% for (var i=0; i<results[8].length; i++){ %>
+        <li><%= results[8][i].zzz %> :  <%= results[8][i].count %></li>
+    <% } %>    
+    </ul>
+    
+    
+    
+</body>
+</html>
